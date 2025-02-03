@@ -12,8 +12,8 @@ kbd.init_pins(
 
 # default layer should be added at first
 kbd.add_layer :default, %i(
-  KC_Q      KC_W      KC_E        KC_R      KC_T       KC_Y       KC_U      KC_I      KC_O      KC_BSPACE
-  A_LCTL    KC_S      KC_D        KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      KC_P
+  KC_Q      KC_W      KC_E        KC_R      KC_T       KC_Y       KC_U      KC_I      KC_O      KC_P
+  A_LCTL    KC_S      KC_D        KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      KC_BSPACE
   Z_LSFT    KC_X      C_LALT      V_LGUI    SPC_LOWER  ENT_RAISE  B_RGUI    N_RALT    M_RCTL    MINS_RSFT
 )
 kbd.add_layer :lower, %i(
@@ -23,7 +23,7 @@ kbd.add_layer :lower, %i(
 )
 kbd.add_layer :raise, %i(
   KC_F1     KC_F2     KC_F3       KC_F4     KC_F5      KC_F6      KC_F7     KC_F8     KC_F9     KC_F10
-  KC_TAB    KC_F11    KC_F12      KC_F      KC_G       KC_LCBR    KC_RCBR   KC_PIPE   KC_COLON  KC_DQUO
+  KC_TAB    KC_F11    KC_F12      KC_LCBR   KC_RCBR    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_DQUO
   KC_ESCAPE KC_LALT   KC_LALT     KC_LGUI   ADJUST     RAISE      KC_LABK   KC_RABK   KC_QUES   KC_PLUS
 )
 kbd.add_layer :adjust, %i(
