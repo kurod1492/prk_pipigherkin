@@ -29,7 +29,7 @@ kbd.add_layer :raise, %i(
 kbd.add_layer :adjust, %i(
   KC_1      KC_2      KC_3        KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
   KC_TAB    KC_PLUS   KC_EQUAL    KC_MINUS  KC_UNDS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_PIPE
-  KC_LSFT   KC_LCTL   KC_LALT     KC_LGUI   UNLOCK     ULOCK      KC_COMMA  KC_DOT    KC_SLASH  KC_BSLS
+  KC_LSFT   KC_LCTL   KC_LALT     KC_LGUI   UNLOCK     ULOCK      KC_COMMA  KC_DOT    KC_SLASH  BOOTSEL
 )
 #
 #                   Your custom    Keycode or                          Keycode (only modifiers)    Release time     Re-push time
@@ -59,6 +59,7 @@ kbd.define_mode_key :BS_RAISE,  [ :KC_BSPACE,                          :raise,  
 kbd.define_mode_key :SPC_LOWER, [ :KC_SPACE,                           :lower,                     150,             150 ]
 kbd.define_mode_key :ADJUST,    [ Proc.new { kbd.lock_layer :adjust }, :KC_LSFT,                   300,             nil ]
 kbd.define_mode_key :UNLOCK,    [ Proc.new { kbd.unlock_layer },       :KC_LSFT,                   300,             nil ]
+kbd.define_mode_key :BOOTSEL,   [ Proc.new { kbd.bootsel! },           nil,                        200,             nil ]
 
 # Tip: You can also switch current layer by single click like this:
 #   kbd.define_mode_key :RAISE, [ Proc.new { kbd.raise_layer }, :KC_LSFT, 150, nil ]
