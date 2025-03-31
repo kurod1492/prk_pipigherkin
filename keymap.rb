@@ -14,21 +14,21 @@ kbd.init_pins(
 kbd.add_layer :default, %i(
   KC_Q      KC_W      KC_E        KC_R      KC_T       KC_Y       KC_U      KC_I      KC_O      KC_P
   A_LCTL    KC_S      KC_D        KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      KC_BSPACE
-  Z_LSFT    X_LCTL    C_LALT      V_LGUI    SPC_LOWER  ENT_RAISE  B_RGUI    N_RALT    M_RCTL    MINS_RSFT
+  Z_LSFT    KC_X      C_LALT      V_LGUI    SPC_LOWER  ENT_RAISE  B_RGUI    N_RALT    M_RCTL    MINS_RSFT
 )
 kbd.add_layer :lower, %i(
   KC_EXLM   KC_AT     KC_HASH     KC_DLR    KC_PERC    KC_CIRC    KC_AMPR   KC_ASTER  KC_LPRN   KC_RPRN
-  KC_TILD   KC_GRAVE  KC_BSLS     KC_PIPE   KC_SLASH   KC_QUES    KC_LBRC   KC_RBRC   KC_SCOLON KC_QUOTE
-  KC_ESCAPE KC_LCTL   KC_LALT     KC_LGUI   LOWER      ADJUST     KC_COMMA  KC_DOT    KC_SLASH  KC_EQUAL
+  KC_LCTL   KC_GRAVE  KC_BSLS     KC_PIPE   KC_SLASH   KC_EQUAL   KC_LBRC   KC_RBRC   KC_SCOLON KC_QUOTE
+  KC_LSFT   KC_X      KC_LALT     KC_LGUI   LOWER      ADJUST     KC_COMMA  KC_DOT    KC_SLASH  KC_QUES
 )
 kbd.add_layer :raise, %i(
-  KC_F1     KC_F2     KC_F3       KC_F4     KC_F5      KC_F6      KC_F7     KC_F8     KC_F9     KC_F10
-  KC_TAB    KC_F11    KC_F12      KC_LCBR   KC_RCBR    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_DQUO
+  KC_1      KC_2      KC_3        KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
+  KC_TAB    KC_TILD   KC_DQUO     KC_LCBR   KC_RCBR    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_DQUO
   KC_ESCAPE KC_LCTL   KC_LALT     KC_LGUI   ADJUST     RAISE      KC_LABK   KC_RABK   KC_QUES   KC_PLUS
 )
 kbd.add_layer :adjust, %i(
-  KC_1      KC_2      KC_3        KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
-  KC_TAB    KC_PLUS   KC_EQUAL    KC_MINUS  KC_UNDS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_PIPE
+  KC_F1     KC_F2     KC_F3       KC_F4     KC_F5      KC_F6      KC_F7     KC_F8     KC_F9     KC_F10
+  KC_TAB    KC_F11    KC_F12      KC_MINUS  KC_UNDS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_PIPE
   KC_LSFT   KC_LCTL   KC_LALT     KC_LGUI   UNLOCK     ULOCK      KC_COMMA  KC_DOT    KC_SLASH  BOOTSEL
 )
 #
