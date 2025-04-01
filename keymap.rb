@@ -12,19 +12,20 @@ kbd.init_pins(
 
 # default layer should be added at first
 kbd.add_layer :default, %i(
-  KC_Q      KC_W      KC_E        KC_R      KC_T       KC_Y       KC_U      KC_I      KC_O      KC_P
-  KC_A      KC_S      KC_D        KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      KC_BSPACE
+  KC_Q      KC_W      KC_E        KC_R      KC_T       KC_Y       KC_U      KC_I      KC_O      KC_BSPACE
+  KC_A      KC_S      KC_D        KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      KC_P
   Z_LSFT    X_LGUI    C_LALT      V_LCTL    SPC_LOWER  ENT_RAISE  B_RCTL    N_RALT    M_RGUI    MINS_RSFT
 )
 kbd.add_layer :lower, %i(
   KC_1      KC_2      KC_3        KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
-  KC_TILD   KC_GRAVE  KC_BSLS     KC_PIPE   KC_PLUS    KC_EQUAL   KC_LBRC   KC_RBRC   KC_SCOLON KC_COLON
-  KC_LSFT   KC_LGUI   KC_LALT     KC_LCTL   SPC_LOWER  ADJUST     KC_COMMA  KC_DOT    KC_SLASH  KC_QUES
+  KC_TILD   KC_LBRC   KC_RBRC     KC_GRAVE  KC_BSLS    KC_PIPE    KC_PLUS   KC_EQUAL  KC_COLON  KC_DQUO
+  KC_ESCAPE KC_LABK   KC_RABK     KC_SLASH  SPC_LOWER  ADJUST     KC_RCTL   KC_RALT   KC_RGUI   KC_SCOLON  
+
 )
 kbd.add_layer :raise, %i(
   KC_EXLM   KC_AT     KC_HASH     KC_DLR    KC_PERC    KC_CIRC    KC_AMPR   KC_ASTER  KC_LPRN   KC_RPRN
-  KC_TAB    KC_LCBR   KC_RCBR     KC_EQUAL  KC_PLUS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_DQUO
-  KC_ESCAPE KC_LABK   KC_RABK     KC_SLASH  ADJUST     ENT_RAISE  KC_RCTL   KC_RALT   KC_RGUI   KC_QUOTE
+  KC_TAB    KC_LCBR   KC_RCBR     KC_EQUAL  KC_PLUS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_QUOTE
+  KC_LSFT   KC_LGUI   KC_LALT     KC_LCTL   ADJUST     ENT_RAISE  KC_COMMA  KC_DOT    KC_SLASH  KC_QUES
 )
 kbd.add_layer :adjust, %i(
   KC_F1     KC_F2     KC_F3       KC_F4     KC_F5      KC_F6      KC_F7     KC_F8     KC_F9     KC_F10
