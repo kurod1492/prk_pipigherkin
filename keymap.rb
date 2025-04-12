@@ -14,23 +14,22 @@ kbd.init_pins(
 kbd.add_layer :default, %i(
   KC_Q      KC_W      KC_E        KC_R      KC_T       KC_Y       KC_U      KC_I      KC_O      KC_P
   A_LCTL    KC_S      KC_D        KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      KC_BSPACE
-  Z_LSFT    X_LGUI    C_LALT      V_LCTL    SPC_LOWER  ENT_RAISE  B_RCTL    N_RALT    M_RGUI    MINS_RSFT
+  Z_LSFT    X_LCTL    C_LALT      V_LGUI    SPC_LOWER  ENT_RAISE  B_RGUI    N_RALT    M_RCTL    MINS_RSFT
 )
 kbd.add_layer :lower, %i(
   KC_1      KC_2      KC_3        KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
-  KC_TAB    KC_TILD   KC_BSLS     KC_PIPE   KC_SLASH   KC_QUES    KC_COMMA  KC_DOT    KC_SCOLON KC_QUOTE
-  KC_ESCAPE X_LGUI    C_LALT      V_LCTL    SPC_LOWER  ADJUST     B_RCTL    N_RALT    M_RGUI    SLAS_RSFT
-
+  KC_GRAVE  KC_TILD   KC_BSLS     KC_PIPE   KC_SLASH   KC_QUES    KC_COMMA  KC_DOT    KC_SCOLON KC_QUOTE
+  UNDO      CUT       COPY        PASTE     SPC_LOWER  ADJUST     B_RGUI    N_RALT    M_RCTL    SLAS_RSFT
 )
 kbd.add_layer :raise, %i(
   KC_EXLM   KC_AT     KC_HASH     KC_DLR    KC_PERC    KC_CIRC    KC_AMPR   KC_ASTER  KC_LPRN   KC_RPRN
-  KC_GRAVE  KC_LBRC   KC_RBRC     KC_EQUAL  KC_PLUS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_DQUO
-  UNDO      KC_LCBR   KC_RCBR     KC_LCTL   ADJUST     ENT_RAISE  KC_RCTL   KC_RALT   KC_RGUI   KC_COLON
+  KC_TAB    KC_LBRC   KC_RBRC     KC_EQUAL  KC_PLUS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_DQUO
+  KC_ESCAPE KC_LABK   KC_RABK     KC_LGUI   ADJUST     ENT_RAISE  KC_RGUI   KC_RALT   KC_RCTL   COLN_RSFT
 )
 kbd.add_layer :adjust, %i(
   KC_F1     KC_F2     KC_F3       KC_F4     KC_F5      KC_F6      KC_F7     KC_F8     KC_F9     KC_F10
-  KC_TAB    KC_PLUS   KC_EQUAL    KC_MINUS  KC_UNDS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_PIPE
-  KC_LSFT   KC_LGUI   KC_LALT     KC_LCTL   UNLOCK     ULOCK      KC_COMMA  KC_DOT    KC_SLASH  BOOTSEL
+  KC_F11    KC_F12    KC_EQUAL    KC_MINUS  KC_UNDS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_PIPE
+  KC_LSFT   KC_LCTL   KC_LALT     KC_LGUI   UNLOCK     UNLOCK     KC_RGUI   KC_RALT   KC_RCTL   BOOTSEL
 )
 #
 #                   Your custom    Keycode or                          Keycode (only modifiers)    Release time     Re-push time
@@ -54,6 +53,7 @@ kbd.define_mode_key :M_RCTL,    [ :KC_M,                               :KC_RCTL,
 kbd.define_mode_key :M_RGUI,    [ :KC_M,                               :KC_RGUI,                   300,             300 ]
 kbd.define_mode_key :MINS_RSFT, [ :KC_MINUS,                           :KC_RSFT,                   300,             300 ]
 kbd.define_mode_key :SLAS_RSFT, [ :KC_SLASH,                           :KC_RSFT,                   300,             300 ]
+kbd.define_mode_key :COLN_RSFT, [ :KC_COLON,                           :KC_RSFT,                   300,             300 ]
 kbd.define_mode_key :UNDS_RSFT, [ :KC_UNDS,                            :KC_RSFT,                   300,             300 ]
 kbd.define_mode_key :ENT_RAISE, [ :KC_ENTER,                           :raise,                     300,             300 ]
 kbd.define_mode_key :ENT_RCTL,  [ :KC_ENTER,                           :KC_RCTL,                   300,             300 ]
