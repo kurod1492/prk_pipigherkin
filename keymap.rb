@@ -18,18 +18,18 @@ kbd.add_layer :default, %i(
 )
 kbd.add_layer :lower, %i(
   KC_1      KC_2      KC_3        KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
-  KC_TAB    KC_TILD   KC_BSLS     KC_PIPE   KC_SLASH   KC_QUES    KC_COMMA  KC_DOT    KC_SCOLON KC_QUOTE
-  KC_ESCAPE KC_LABK   KC_RABK     KC_LGUI   SPC_LOWER  ADJUST     B_RGUI    N_RALT    M_RCTL    SLAS_RSFT
+  KC_TAB    KC_TILD   KC_BSLS     KC_PIPE   KC_EQUAL   KC_QUES    KC_COMMA  KC_DOT    KC_SCOLON KC_QUOTE
+  UNDO      CUT       COPY        PASTE     SPC_LOWER  CMD_ENT    B_RGUI    N_RALT    M_RCTL    SLAS_RSFT
 )
 kbd.add_layer :raise, %i(
   KC_EXLM   KC_AT     KC_HASH     KC_DLR    KC_PERC    KC_CIRC    KC_AMPR   KC_ASTER  KC_LPRN   KC_RPRN
-  KC_GRAVE  KC_LBRC   KC_RBRC     KC_EQUAL  KC_PLUS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_DQUO
-  UNDO      CUT       COPY        PASTE     ADJUST     ENT_RAISE  KC_RGUI   KC_RALT   KC_RCTL   COLN_RSFT
+  KC_ESCAPE KC_GRAVE  KC_LBRC     KC_RBRC   KC_PLUS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_DQUO
+  KC_LCTL   KC_LSFT   KC_LABK     KC_RABK   ADJUST     ENT_RAISE  KC_RGUI   KC_RALT   KC_RCTL   COLN_RSFT
 )
 kbd.add_layer :adjust, %i(
-  KC_F1     KC_F2     KC_F3       KC_F4     KC_F5      KC_F6      KC_F7     KC_F8     KC_F9     KC_F10
-  KC_F11    KC_F12    KC_EQUAL    KC_MINUS  KC_UNDS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_PIPE
-  KC_LSFT   KC_LCTL   KC_LALT     KC_LGUI   UNLOCK     UNLOCK     KC_RGUI   KC_RALT   KC_RCTL   BOOTSEL
+  KC_1      KC_2      KC_3        KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
+  KC_F1     KC_F2     KC_F3       KC_F4     KC_F5      KC_F6      KC_F7     KC_F8     KC_F9     KC_BSPACE
+  KC_F10    KC_F11    KC_F12      BOOTSEL   UNLOCK     UNLOCK     KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
 )
 #
 #                   Your custom    Keycode or                          Keycode (only modifiers)    Release time     Re-push time
@@ -37,7 +37,9 @@ kbd.add_layer :adjust, %i(
 #                                  or Proc                             or Proc which will run      to consider as   to consider as
 #                                  when you click                      while you keep press        `click the key`  `hold the key`
 kbd.define_mode_key :Z_LSFT,    [ :KC_Z,                               :KC_LSFT,                   300,             300 ]
+kbd.define_mode_key :Z_LCTL,    [ :KC_Z,                               :KC_LCTL,                   300,             300 ]
 kbd.define_mode_key :X_LCTL,    [ :KC_X,                               :KC_LCTL,                   300,             300 ]
+kbd.define_mode_key :X_LSFT,    [ :KC_X,                               :KC_LSFT,                   300,             300 ]
 kbd.define_mode_key :X_LALT,    [ :KC_X,                               :KC_LALT,                   300,             300 ]
 kbd.define_mode_key :X_LGUI,    [ :KC_X,                               :KC_LGUI,                   300,             300 ]
 kbd.define_mode_key :C_LALT,    [ :KC_C,                               :KC_LALT,                   300,             300 ]
@@ -69,6 +71,7 @@ kbd.define_composite_key :COPY, %i(KC_LGUI KC_C)
 kbd.define_composite_key :PASTE, %i(KC_LGUI KC_V)
 kbd.define_composite_key :UNDO, %i(KC_LGUI KC_Z)
 kbd.define_composite_key :SELECTALL, %i(KC_LGUI KC_A)
+kbd.define_composite_key :CMD_ENT, %i(KC_LGUI KC_ENTER)
 
 # Tip: You can also switch current layer by single click like this:
 #   kbd.define_mode_key :RAISE, [ Proc.new { kbd.raise_layer }, :KC_LSFT, 300, nil ]
