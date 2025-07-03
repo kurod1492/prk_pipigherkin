@@ -13,8 +13,8 @@ kbd.init_pins(
 # default layer should be added at first
 kbd.add_layer :default, %i(
   KC_Q      KC_W      KC_E        KC_R      KC_T       KC_Y       KC_U      KC_I      KC_O      KC_P
-  A_LCTL    KC_S      KC_D        KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      BS_RCTL
-  Z_LSFT    X_LCTL    C_LALT      V_LGUI    SPC_LOWER  ENT_RAISE  B_RGUI    N_RALT    M_RCTL    MINS_RSFT
+  A_LCTL    KC_S      KC_D        KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      MINS_RCTL
+  Z_LSFT    X_LCTL    C_LALT      V_LGUI    SPC_LOWER  ENT_RAISE  B_RGUI    N_RALT    M_RCTL    BS_RSFT
 )
 kbd.add_layer :lower, %i(
   KC_1      KC_2      KC_3        KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
@@ -54,6 +54,7 @@ kbd.define_mode_key :N_RALT,    [ :KC_N,                               :KC_RALT,
 kbd.define_mode_key :M_RCTL,    [ :KC_M,                               :KC_RCTL,                   300,             300 ]
 kbd.define_mode_key :M_RGUI,    [ :KC_M,                               :KC_RGUI,                   300,             300 ]
 kbd.define_mode_key :MINS_RSFT, [ :KC_MINUS,                           :KC_RSFT,                   300,             300 ]
+kbd.define_mode_key :MINS_RCTL, [ :KC_MINUS,                           :KC_RCTL,                   300,             300 ]
 kbd.define_mode_key :SLAS_RSFT, [ :KC_SLASH,                           :KC_RSFT,                   300,             300 ]
 kbd.define_mode_key :COLN_RSFT, [ :KC_COLON,                           :KC_RSFT,                   300,             300 ]
 kbd.define_mode_key :UNDS_RSFT, [ :KC_UNDS,                            :KC_RSFT,                   300,             300 ]
@@ -61,6 +62,7 @@ kbd.define_mode_key :ENT_RAISE, [ :KC_ENTER,                           :raise,  
 kbd.define_mode_key :ENT_RCTL,  [ :KC_ENTER,                           :KC_RCTL,                   300,             300 ]
 kbd.define_mode_key :BS_RAISE,  [ :KC_BSPACE,                          :raise,                     300,             300 ]
 kbd.define_mode_key :BS_RCTL,   [ :KC_BSPACE,                          :KC_RCTL,                   300,             300 ]
+kbd.define_mode_key :BS_RSFT,   [ :KC_BSPACE,                          :KC_RSFT,                   300,             300 ]
 kbd.define_mode_key :SPC_LOWER, [ :KC_SPACE,                           :lower,                     300,             300 ]
 kbd.define_mode_key :ADJUST,    [ Proc.new { kbd.lock_layer :adjust }, :KC_LSFT,                   300,             nil ]
 kbd.define_mode_key :UNLOCK,    [ Proc.new { kbd.unlock_layer },       :KC_LSFT,                   300,             nil ]
