@@ -13,18 +13,18 @@ kbd.init_pins(
 # default layer should be added at first
 kbd.add_layer :default, %i(
   KC_Q      KC_W      KC_E    KC_R      KC_T       KC_Y       KC_U      KC_I      KC_O      KC_P
-  KC_A      KC_S      KC_D    KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      KC_MINUS
+  A_LCTL    KC_S      KC_D    KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      MINS_RCTL
   Z_LSFT    X_LCTL    C_LALT  V_LGUI    SPC_LOWER  ENT_RAISE  B_RGUI    N_RALT    M_RCTL    BS_RSFT
 )
 kbd.add_layer :lower, %i(
-  KC_1      KC_2      KC_3    KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
-  KC_EXLM   KC_AT     KC_HASH KC_DLR    KC_PERC    KC_CIRC    KC_AMPR   KC_ASTER  KC_LPRN   KC_RPRN
-  KC_LSFT   KC_LCTL   KC_LALT KC_LGUI   LOWER      CMD_ENT    KC_RGUI   KC_RALT   KC_RCTL   KC_SCOLON
+  KC_1      KC_2      KC_3     KC_4     KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
+  KC_ESCAPE KC_GRAVE  KC_PLUS  KC_QUOTE KC_DQUO    KC_QUES    KC_COMMA  KC_DOT    KC_LBRC   KC_RBRC
+  UNDO      CUT       COPY     PASTE    LOWER      CMD_ENT    KC_SCOLON KC_COLON  KC_LABK   KC_RABK
 )
 kbd.add_layer :raise, %i(
-  KC_ESCAPE KC_TILD   KC_PIPE  KC_COMMA KC_QUOTE   KC_PLUS    KC_LABK   KC_RABK   KC_LBRC   KC_RBRC
-  KC_TAB    KC_GRAVE  KC_BSLS  KC_DOT   KC_SLASH   KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_EQUAL  
-  KC_LSFT   CUT       COPY     PASTE    ADJUST     RAISE      KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
+  KC_EXLM   KC_AT     KC_HASH  KC_DLR   KC_PERC    KC_CIRC    KC_AMPR   KC_ASTER  KC_LPRN   KC_RPRN
+  KC_TAB    KC_TILD   KC_PIPE  KC_BSLS  KC_SLASH   KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_EQUAL  
+  KC_LSFT   KC_LCTL   KC_LALT  KC_LGUI  ADJUST     RAISE      KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
 )
 kbd.add_layer :adjust, %i(
   KC_1      KC_2      KC_3    KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
@@ -53,6 +53,7 @@ kbd.define_mode_key :B_RAISE,   [ :KC_B,                               :raise,  
 kbd.define_mode_key :N_RALT,    [ :KC_N,                               :KC_RALT,                   300,             300 ]
 kbd.define_mode_key :M_RCTL,    [ :KC_M,                               :KC_RCTL,                   300,             300 ]
 kbd.define_mode_key :M_RGUI,    [ :KC_M,                               :KC_RGUI,                   300,             300 ]
+kbd.define_mode_key :M_RSFT,    [ :KC_M,                               :KC_RSFT,                   300,             300 ]
 kbd.define_mode_key :MINS_RSFT, [ :KC_MINUS,                           :KC_RSFT,                   300,             300 ]
 kbd.define_mode_key :MINS_RCTL, [ :KC_MINUS,                           :KC_RCTL,                   300,             300 ]
 kbd.define_mode_key :SLAS_RSFT, [ :KC_SLASH,                           :KC_RSFT,                   300,             300 ]
