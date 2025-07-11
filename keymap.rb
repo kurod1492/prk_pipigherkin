@@ -18,12 +18,12 @@ kbd.add_layer :default, %i(
 )
 kbd.add_layer :lower, %i(
   KC_1      KC_2      KC_3     KC_4     KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
-  KC_TAB    KC_GRAVE  KC_PLUS  KC_QUOTE KC_DQUO    KC_QUES    KC_COMMA  KC_DOT    KC_LBRC   KC_RBRC
+  KC_TAB    KC_TILD   KC_SLASH KC_PIPE  KC_BSLS    KC_QUES    KC_COMMA  KC_DOT    KC_LBRC   KC_RBRC
   UNDO      CUT       COPY     PASTE    LOWER      CMD_ENT    KC_RGUI   KC_COLON  KC_LABK   KC_RABK
 )
 kbd.add_layer :raise, %i(
   KC_EXLM   KC_AT     KC_HASH  KC_DLR   KC_PERC    KC_CIRC    KC_AMPR   KC_ASTER  KC_LPRN   KC_RPRN
-  KC_ESCAPE KC_TILD   KC_PIPE  KC_BSLS  KC_SLASH   KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_EQUAL  
+  KC_ESCAPE KC_PLUS   KC_GRAVE KC_QUOTE KC_DQUO    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_EQUAL  
   KC_LSFT   KC_LCTL   KC_LALT  KC_LGUI  ADJUST     RAISE      KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
 )
 kbd.add_layer :adjust, %i(
