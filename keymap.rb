@@ -3,11 +3,11 @@ kbd = Keyboard.new
 
 # Initialize GPIO assign
 kbd.init_pins(
-  #[ 8, 9, 10, 11, 12 ], # row0, row1,... respectively
-  #[ 2, 3, 4, 5, 6, 7 ]  # col0, col1,... respectively
+  [ 8, 9, 10, 11, 12 ], # row0, row1,... respectively
+  [ 2, 3, 4, 5, 6, 7 ]  # col0, col1,... respectively
   # If you put USB port on the right side, use below instead
-  [ 12, 11, 10, 9, 8 ],
-  [ 7, 6, 5, 4, 3, 2 ]
+  # [ 12, 11, 10, 9, 8 ],
+  # [ 7, 6, 5, 4, 3, 2 ]
 )
 
 # default layer should be added at first
@@ -18,7 +18,7 @@ kbd.add_layer :default, %i(
 )
 kbd.add_layer :lower, %i(
   KC_1      KC_2      KC_3      KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
-  KC_TAB    KC_SCOLON KC_QUOTE  KC_SLASH  KC_TILD    KC_QUES    KC_COMMA  KC_DOT    KC_COLON  KC_PIPE
+  KC_TAB    KC_SCOLON KC_COLON  KC_PIPE   KC_QUOTE   KC_QUES    KC_COMMA  KC_DOT    KC_TILD   KC_SLASH  
   UNDO      CUT       COPY      PASTE     LOWER      CMD_ENT    KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
 )
 kbd.add_layer :raise, %i(
