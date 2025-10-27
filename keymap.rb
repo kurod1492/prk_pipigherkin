@@ -12,24 +12,24 @@ kbd.init_pins(
 
 # default layer should be added at first
 kbd.add_layer :default, %i(
-  KC_Q      KC_W      KC_E      KC_R      KC_T       KC_Y       KC_U      KC_I      KC_O      KC_BSPACE
-  A_LCTL    KC_S      KC_D      KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      KC_P
-  Z_LSFT    X_LCTL    C_LALT    V_LGUI    SPC_LOWER  ENT_RAISE  B_RGUI    N_RALT    M_RCTL    MINS_RSFT
+  KC_Q      KC_W      KC_E      KC_R      KC_T       KC_Y       KC_U      KC_I      KC_O      KC_P
+  A_LCTL    KC_S      KC_D      KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      KC_MINUS
+  Z_LSFT    X_LCTL    C_LALT    V_LGUI    SPC_LOWER  ENT_RAISE  B_RGUI    N_RALT    M_RCTL    BS_RSFT
 )
 kbd.add_layer :lower, %i(
   KC_1      KC_2      KC_3      KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
-  KC_TAB    KC_SCOLON KC_COLON  KC_PIPE   KC_QUOTE   KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_BSLS
-  KC_LSFT   KC_LCTL   KC_LALT   KC_LGUI   LOWER      ADJUST     KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
+  KC_TAB    KC_SCOLON KC_PIPE   KC_COLON  KC_QUOTE   KC_QUES    KC_COMMA  KC_DOT    KC_TILD   KC_SLASH
+  UNDO      CUT       COPY      PASTE     LOWER      ADJUST     KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
 )
 kbd.add_layer :raise, %i(
   KC_EXLM   KC_AT     KC_HASH   KC_DLR    KC_PERC    KC_CIRC    KC_AMPR   KC_ASTER  KC_LPRN   KC_RPRN
-  KC_ESCAPE KC_LABK   KC_RABK   KC_PLUS   KC_DQUO    KC_QUES    KC_COMMA  KC_DOT    KC_TILD   KC_SLASH
-  KC_GRAVE  KC_LBRC   KC_RBRC   KC_EQUAL  ADJUST     RAISE      KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
+  KC_ESCAPE KC_LBRC   KC_RBRC   KC_PLUS   KC_DQUO    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_BSLS
+  KC_LSFT   KC_LCTL   KC_LALT   KC_LGUI   ADJUST     RAISE      KC_GRAVE  KC_LABK   KC_RABK   KC_EQUAL
 )
 kbd.add_layer :adjust, %i(
   KC_F1     KC_F2     KC_F3     KC_F4     KC_F5      KC_F6      KC_F7     KC_F8     KC_F9     KC_F10
   KC_F11    KC_F12    NONE      NONE      NONE       KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_EQUAL
-  KC_LANG1  CTL_TAB   NONE      NONE      UNLOCK     UNLOCK     KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
+  KC_LSFT   KC_LANG1  CTL_TAB   NONE      UNLOCK     UNLOCK     KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
 )
 #
 #                   Your custom    Keycode or                          Keycode (only modifiers)    Release time     Re-push time
