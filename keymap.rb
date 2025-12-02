@@ -13,13 +13,13 @@ kbd.init_pins(
 # default layer should be added at first
 kbd.add_layer :default, %i(
   KC_Q      KC_W      KC_E      KC_R      KC_T       KC_Y       KC_U      KC_I      KC_O      KC_P
-  A_LCTL    KC_S      KC_D      KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      KC_MINUS
+  A_LCTL    KC_S      KC_D      KC_F      KC_G       KC_H       KC_J      KC_K      KC_L      MINS_RCTL
   Z_LSFT    X_LCTL    C_LALT    V_LGUI    SPC_LOWER  ENT_RAISE  B_RGUI    N_RALT    M_RCTL    BS_RSFT
 )
 kbd.add_layer :lower, %i(
   KC_1      KC_2      KC_3      KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
   KC_TAB    KC_SCOLON KC_PIPE   KC_COLON  KC_QUOTE   KC_QUES    KC_COMMA  KC_DOT    KC_TILD   KC_SLASH
-  UNDO      CUT       COPY      PASTE     LOWER      ADJUST     KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
+  UNDO      CUT       COPY      PASTE     LOWER      KC_LANG1   KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
 )
 kbd.add_layer :raise, %i(
   KC_EXLM   KC_AT     KC_HASH   KC_DLR    KC_PERC    KC_CIRC    KC_AMPR   KC_ASTER  KC_LPRN   KC_RPRN
