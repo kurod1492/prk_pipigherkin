@@ -65,7 +65,7 @@ kbd.define_mode_key :ENT_RSFT,  [ :KC_ENTER,                           :KC_RSFT,
 kbd.define_mode_key :BS_RAISE,  [ :KC_BSPACE,                          :raise,                     550,             200 ]
 kbd.define_mode_key :BS_RCTL,   [ :KC_BSPACE,                          :KC_RCTL,                   550,             200 ]
 kbd.define_mode_key :BS_RSFT,   [ :KC_BSPACE,                          :KC_RSFT,                   550,             200 ]
-kbd.define_mode_key :SPC_LOWER, [ :KC_SPACE,                           :lower,                     550,             200 ]
+kbd.define_mode_key :SPC_LOWER, [ :KC_SPACE,                           :lower,                     300,             200 ]
 kbd.define_mode_key :ADJUST,    [ Proc.new { kbd.lock_layer :adjust }, :KC_LSFT,                   550,             nil ]
 kbd.define_mode_key :UNLOCK,    [ Proc.new { kbd.unlock_layer },       :KC_LSFT,                   550,             nil ]
 kbd.define_mode_key :BOOTSEL,   [ Proc.new { kbd.bootsel! },           nil,                        550,             nil ]
