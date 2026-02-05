@@ -18,18 +18,18 @@ kbd.add_layer :default, %i(
 )
 kbd.add_layer :lower, %i(
   KC_1      KC_2      KC_3      KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
-  KC_TAB    KC_GRAVE  KC_BSLS   KC_SCOLON KC_QUOTE   KC_LBRC    KC_RBRC   KC_COMMA  KC_DOT    KC_SLASH
-  KC_LSFT   KC_LCTL   KC_LALT   KC_LGUI   LOWER      KC_LANG1   KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
+  KC_TAB    CUT       COPY      PASTE     KC_COLON   KC_QUES    KC_COMMA  KC_DOT    KC_TILD   KC_SLASH
+  KC_LBRC   KC_RBRC   KC_LCBR   KC_RCBR   LOWER      KC_LANG1   KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
 )
 kbd.add_layer :raise, %i(
   KC_EXLM   KC_AT     KC_HASH   KC_DLR    KC_PERC    KC_CIRC    KC_AMPR   KC_ASTER  KC_LPRN   KC_RPRN
-  KC_ESCAPE KC_MINS   KC_UNDS   KC_EQUAL  KC_PLUS    KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_BSLS
-  KC_LSFT   KC_LCTL   KC_LALT   KC_LGUI   ADJUST     RAISE      KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
+  KC_ESCAPE KC_GRAVE  KC_QUOTE  KC_EQUAL  KC_SCOLON  KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_BSLS
+  KC_LSFT   KC_LCTL   KC_LALT   KC_LGUI   ADJUST     RAISE      KC_PLUS   KC_DQUO   KC_LABK   KC_RABK
 )
 kbd.add_layer :adjust, %i(
   KC_F1     KC_F2     KC_F3     KC_F4     KC_F5      KC_F6      KC_F7     KC_F8     KC_F9     KC_F10
-  KC_F11    KC_F12    NONE      NONE      NONE       KC_LEFT    KC_DOWN   KC_UP     KC_RIGHT  KC_EQUAL
-  KC_LSFT   KC_LANG1  CTL_TAB   NONE      UNLOCK     UNLOCK     KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
+  KC_F11    KC_F12    NONE      NONE      KC_LABK    KC_RABK    KC_LCBR   KC_RCBR   KC_LBRC   KC_RBRC
+  KC_Z      KC_X      KC_C      KC_V      ADJUST     UNLOCK     KC_RGUI   KC_RALT   KC_RCTL   KC_RSFT
 )
 #
 #                   Your custom    Keycode or                          Keycode (only modifiers)    Release time     Re-push time
@@ -66,8 +66,8 @@ kbd.define_mode_key :BS_RAISE,  [ :KC_BSPACE,                          :raise,  
 kbd.define_mode_key :BS_RCTL,   [ :KC_BSPACE,                          :KC_RCTL,                   550,             200 ]
 kbd.define_mode_key :BS_RSFT,   [ :KC_BSPACE,                          :KC_RSFT,                   200,             200 ]
 kbd.define_mode_key :SPC_LOWER, [ :KC_SPACE,                           :lower,                     200,             200 ]
-kbd.define_mode_key :ADJUST,    [ Proc.new { kbd.lock_layer :adjust }, :KC_LSFT,                   550,             nil ]
-kbd.define_mode_key :UNLOCK,    [ Proc.new { kbd.unlock_layer },       :KC_LSFT,                   550,             nil ]
+kbd.define_mode_key :ADJUST,    [ Proc.new { kbd.lock_layer :adjust }, :adjust,                    550,             nil ]
+kbd.define_mode_key :UNLOCK,    [ Proc.new { kbd.unlock_layer },       :KC_LGUI,                   550,             nil ]
 kbd.define_mode_key :BOOTSEL,   [ Proc.new { kbd.bootsel! },           nil,                        550,             nil ]
 
 kbd.define_composite_key :CUT,       %i(KC_LGUI KC_X)
